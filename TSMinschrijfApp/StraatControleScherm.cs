@@ -17,15 +17,16 @@ namespace TSMinschrijfApp
         //straat, nr en bus gegevens wegschrijven in leerling
         private void button1_Click(object sender, EventArgs e)
         {
+            //controle of gebruiker geen straat en nr ingeeft anders het scherm niet sluiten
+            if ((txtbox_StraatZonderHuisNr.Text == "") || (txtbox_HuisNr.Text == ""))
+            {
+                MessageBox.Show("Je hebt geen straat en huisnr ingegeven! Gelieve dit aan te passen");
+            } else { 
             leerling.huisNr = txtbox_HuisNr.Text;
             leerling.straatZonderNr = txtbox_StraatZonderHuisNr.Text;
             leerling.bus = txtbox_Bus.Text;
             this.Close();
-        }
-
-        private void StraatControleScherm_Load(object sender, EventArgs e)
-        {
-
+            }
         }
     }
 }
