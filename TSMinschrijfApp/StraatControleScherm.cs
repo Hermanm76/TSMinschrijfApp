@@ -21,11 +21,21 @@ namespace TSMinschrijfApp
             if ((txtbox_StraatZonderHuisNr.Text == "") || (txtbox_HuisNr.Text == ""))
             {
                 MessageBox.Show("Je hebt geen straat en huisnr ingegeven! Gelieve dit aan te passen");
+                
             } else { 
             leerling.huisNr = txtbox_HuisNr.Text;
             leerling.straatZonderNr = txtbox_StraatZonderHuisNr.Text;
             leerling.bus = txtbox_Bus.Text;
             this.Close();
+            }
+        }
+
+        private void StraatControleScherm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //form niet afsluiten als huisnr en busnr niet aangepast zijn
+            if (txtbox_HuisNr.Text == "" || txtbox_Bus.Text == "")
+            {
+                e.Cancel = true;
             }
         }
     }

@@ -63,6 +63,7 @@
             this.lbl_land = new System.Windows.Forms.Label();
             this.lbl_schooljaar = new System.Windows.Forms.Label();
             this.cmbbox_Schooljaar = new System.Windows.Forms.ComboBox();
+            this.btn_Help = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_pasfoto)).BeginInit();
             this.SuspendLayout();
@@ -387,12 +388,23 @@
             this.cmbbox_Schooljaar.Size = new System.Drawing.Size(121, 21);
             this.cmbbox_Schooljaar.TabIndex = 33;
             // 
+            // btn_Help
+            // 
+            this.btn_Help.Location = new System.Drawing.Point(863, 9);
+            this.btn_Help.Name = "btn_Help";
+            this.btn_Help.Size = new System.Drawing.Size(41, 23);
+            this.btn_Help.TabIndex = 34;
+            this.btn_Help.Text = "Help";
+            this.btn_Help.UseVisualStyleBackColor = true;
+            this.btn_Help.Click += new System.EventHandler(this.btn_Help_Click);
+            // 
             // Main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(916, 433);
+            this.Controls.Add(this.btn_Help);
             this.Controls.Add(this.cmbbox_Schooljaar);
             this.Controls.Add(this.lbl_schooljaar);
             this.Controls.Add(this.txtBox_land);
@@ -476,6 +488,7 @@
         private System.Windows.Forms.Label lbl_land;
         private System.Windows.Forms.Label lbl_schooljaar;
         private System.Windows.Forms.ComboBox cmbbox_Schooljaar;
+        private System.Windows.Forms.Button btn_Help;
     }
 }
 

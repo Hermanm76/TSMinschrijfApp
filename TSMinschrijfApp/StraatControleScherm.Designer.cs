@@ -158,6 +158,7 @@
             this.Name = "StraatControleScherm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Straat Controle Scherm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StraatControleScherm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -84,11 +84,17 @@
   <ItemGroup>
     <Compile Include="Bewaren.cs" />
     <Compile Include="EIDinleesCode.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="HelpScherm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="HelpScherm.Designer.cs">
+      <DependentUpon>HelpScherm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoofdScherm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoofdScherm.Designer.cs">
+      <DependentUpon>HoofdScherm.cs</DependentUpon>
     </Compile>
     <Compile Include="gebruikerCredentials.cs" />
     <Compile Include="Leerling.cs" />
@@ -107,8 +113,11 @@
     <Compile Include="UserInputBox.Designer.cs">
       <DependentUpon>UserInputBox.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="HelpScherm.resx">
+      <DependentUpon>HelpScherm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoofdScherm.resx">
+      <DependentUpon>HoofdScherm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

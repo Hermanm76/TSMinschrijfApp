@@ -152,5 +152,11 @@ namespace TSMinschrijfApp
             invoerBox.Focus();
             invoerBox.Show();
         }
+
+        private void btn_Help_Click(object sender, EventArgs e)
+        {
+            HelpScherm help = new HelpScherm();
+            help.Visible = true;
+        }
     }
 }
