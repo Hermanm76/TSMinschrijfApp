@@ -20,7 +20,7 @@ namespace TSMinschrijfApp
                 //writer aanmaken om de leerling lokaal te bewaren met als bestandsnaam naam en voornaam van de leerling.
                 writer = new BinaryWriter(new FileStream(TeBewarenLeerling.naam+TeBewarenLeerling.voornaam, FileMode.Create));
             }
-            catch (IOException e)
+            catch (IOException)
             {
                 //message box dat er door een fout geen bestand lokaal kan aangemaakt worden
                 System.Windows.Forms.MessageBox.Show("Kan leerling niet lokaal bewaren.","Melding");
@@ -43,7 +43,7 @@ namespace TSMinschrijfApp
                 writer.Write(TeBewarenLeerling.pasfoto.Length);
                 writer.Write(TeBewarenLeerling.pasfoto);                
             }
-            catch (IOException e)
+            catch (IOException)
             {
                 //message box geven dat er niet naar het bestand kan geschreven worden
                 System.Windows.Forms.MessageBox.Show("\n Kan niet naar bestand schrijven.");                
@@ -67,7 +67,7 @@ namespace TSMinschrijfApp
             {               
                     reader = new BinaryReader(new FileStream(ofd.FileName, FileMode.Open));                
             }
-            catch (IOException e)
+            catch (IOException)
             {
                     //Message box laten zien als het bestand niet kan geopend worden.
                     System.Windows.Forms.MessageBox.Show("\n Kan bestand niet openen.","Melding");                
@@ -89,7 +89,7 @@ namespace TSMinschrijfApp
                 int pasfotolengte = reader.ReadInt32();
                 TeBewarenLeerling.pasfoto = reader.ReadBytes(pasfotolengte);
             }
-            catch (IOException e)
+            catch (IOException)
             {
                     //messagebox laten zien als het gekozen bestand niet kan gelezen worden. bv. fout bestand
                     System.Windows.Forms.MessageBox.Show("\n Kan niet lezen van bestand.","Melding");               

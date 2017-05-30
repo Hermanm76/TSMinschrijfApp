@@ -46,8 +46,6 @@ namespace TSMinschrijfApp
 
         private void getData()
         {
-            String value = "";
-
             if (m == null) {
                 m = Module.GetInstance(mFileName);
             }
