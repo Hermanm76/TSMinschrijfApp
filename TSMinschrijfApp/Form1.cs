@@ -17,6 +17,8 @@ namespace TSMinschrijfApp
         private Leerling leerling = new Leerling();
         private Bewaren bewaren = new Bewaren();
         private StraatControleScherm straatControle;
+        private int Jaar = DateTime.Now.Year;
+        
         private void btn_Afsluiten_Click(object sender, EventArgs e)
         {
             //applicatie afsluiten
@@ -80,6 +82,7 @@ namespace TSMinschrijfApp
         //leerling met ingelezen gegevens aanmaken in sharepoint
         private void btn_LeerlingAanmaken_Click(object sender, EventArgs e)
         {
+
             SharepointBewerkingen aanmaken = new SharepointBewerkingen(gebruikerCr.gebruikerEmail, gebruikerCr.gebruikerPaswoord);
             try
             {
@@ -87,7 +90,7 @@ namespace TSMinschrijfApp
                 {
                     if (straatControleren(leerling))
                     {
-                        aanmaken.LeerlingBewarenInSharepointList(leerling);
+                        aanmaken.LeerlingBewarenInSharepointList(leerling,cmbbox_Schooljaar.SelectedItem.ToString());
                         leerling.leegMaken();
                         formUpdaten(leerling);
                     } else
@@ -121,7 +124,7 @@ namespace TSMinschrijfApp
             }
             if (str.Length == 3 && (System.Text.RegularExpressions.Regex.IsMatch(str[2], @"^\d+$")))
             {
-                leerling.straatZonderNr = str[0] + str[1];
+                leerling.straatZonderNr = str[0] + " " + str[1];
                 leerling.huisNr = str[2];
                 return true;
             }
@@ -139,6 +142,12 @@ namespace TSMinschrijfApp
 
         private void Main_form_Load(object sender, EventArgs e)
         {
+            //opvullen combobox voor het schooljaar en selectie instellen
+            this.cmbbox_Schooljaar.Items.AddRange(new object[] {
+            Jaar-1+"-"+Jaar,
+            Jaar+"-"+(Jaar+1)});
+            this.cmbbox_Schooljaar.SelectedIndex = 1;
+            //gebruikersnaam en paswoord vragen
             invoerBox = new UserInputBox(gebruikerCr,this);
             invoerBox.Focus();
             invoerBox.Show();

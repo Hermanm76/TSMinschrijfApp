@@ -10,8 +10,8 @@ namespace TSMinschrijfApp
         string userName;
         string paswoord;
         ClientContext context;
-        Web web;
-        List announcementsList;
+        //Web web;
+        //List announcementsList;
         SharePointOnlineCredentials credentials; 
         public SharepointBewerkingen(string username,string password)
         {
@@ -27,12 +27,14 @@ namespace TSMinschrijfApp
                 securePassword.AppendChar(c);
             }
             credentials = new SharePointOnlineCredentials(userName, securePassword);
-            context = new ClientContext("https://technischescholenmechel.sharepoint.com/TSM ICT/");
+            //context = new ClientContext("https://technischescholenmechel.sharepoint.com/TSM ICT/");
+            context = new ClientContext("https://technischescholenmechel.sharepoint.com/TSM Globaal/");
             context.Credentials = credentials;
             // Het sharepoint web binnenhalen.
             Web web = context.Web;
             // De bestaande lijst die we nodig hebben binnenhalen "Testlijst - Inschrijvingen eID". 
-            List announcementsList = context.Web.Lists.GetByTitle("Testlijst - Inschrijvingen eID");
+            // List announcementsList = context.Web.Lists.GetByTitle("Testlijst - Inschrijvingen eID");
+            List announcementsList = context.Web.Lists.GetByTitle("MS Inschrijvingen - TEST");
             // This creates a CamlQuery that has a RowLimit of 100, and also specifies Scope="RecursiveAll" 
             // so that it grabs all list items, regardless of the folder they are in. 
             CamlQuery query = CamlQuery.CreateAllItemsQuery(100);
@@ -45,7 +47,7 @@ namespace TSMinschrijfApp
                 // teControlerenLeerling.naam == listItem["Title"]|teControlerenLeerling.voornaam == listItem["rszx"]|
                 
                 // We have all the list item data. For example, Title. 
-                if (teControlerenLeerling.nationaalnummer.Equals(listItem["_x0077_x97"]))
+                if (teControlerenLeerling.nationaalnummer.Equals(listItem["mofc"]))
                 {
                     //leerling bestaat reeds
                     return true;
@@ -55,22 +57,24 @@ namespace TSMinschrijfApp
             return false;
         }
 
-        public void  LeerlingBewarenInSharepointList(Leerling teBewarenLeerling)
+        public void  LeerlingBewarenInSharepointList(Leerling teBewarenLeerling,String schooljaar)
         {
-
+            
             var securePassword = new SecureString();
             foreach (var c in paswoord)
             {
                 securePassword.AppendChar(c);
             }
             credentials = new SharePointOnlineCredentials(userName, securePassword);
-            context = new ClientContext("https://technischescholenmechel.sharepoint.com/TSM ICT/");
+            //context = new ClientContext("https://technischescholenmechel.sharepoint.com/TSM ICT/");
+            context = new ClientContext("https://technischescholenmechel.sharepoint.com/TSM Globaal/");
             context.Credentials = credentials;
 
             // Het sharepoint web binnenhalen.
             Web web = context.Web;
             // De bestaande lijst die we nodig hebben binnenhalen "Testlijst - Inschrijvingen eID". 
-            List announcementsList = context.Web.Lists.GetByTitle("Testlijst - Inschrijvingen eID");
+            //List announcementsList = context.Web.Lists.GetByTitle("Testlijst - Inschrijvingen eID");
+            List announcementsList = context.Web.Lists.GetByTitle("MS Inschrijvingen - TEST");
             // List item aanmaken op basis van de leerling die we willen aanmaken in sharepoint
 
             //standaard aanmaak info gegevens aanmaken. indien nodig kan je hier bepaalde gegevens specifieren
@@ -80,26 +84,37 @@ namespace TSMinschrijfApp
             //NAAM
             nieuwItem["Title"] = teBewarenLeerling.naam;
             //VOORNAAM
-            nieuwItem["rszx"] = teBewarenLeerling.voornaam;
+            nieuwItem["_x006c_a76"] = teBewarenLeerling.voornaam;
             //NATIONAALNUMMER
-            nieuwItem["_x0077_x97"] = teBewarenLeerling.nationaalnummer;
+            nieuwItem["mofc"] = teBewarenLeerling.nationaalnummer;
             //GEBOORTEPLAATS
-            nieuwItem["km3h"] = teBewarenLeerling.geboorteplaats;
+            nieuwItem["_x0071_py8"] = teBewarenLeerling.geboorteplaats;
             //GEBOORTEDATUM
-            nieuwItem["rmtr"] = teBewarenLeerling.geboorteDatumOmzetenDateTime();
+            nieuwItem["lpcu"] = teBewarenLeerling.geboorteDatumOmzetenDateTime();
             //STRAAT
-            nieuwItem["e5ql"] = teBewarenLeerling.straatZonderNr;
+            nieuwItem["leerling_adres_straat"] = teBewarenLeerling.straatZonderNr;
             //NR
-            nieuwItem["zl6m"] = teBewarenLeerling.huisNr;
+            nieuwItem["leerling_adres_nummer"] = teBewarenLeerling.huisNr;
             //BUS
-            nieuwItem["llnv"] = teBewarenLeerling.bus;
+            nieuwItem["leerling_adres_bus"] = teBewarenLeerling.bus;
             //POSTCODE
-            nieuwItem["yfqh"] = teBewarenLeerling.postcode;
+            nieuwItem["leerling_adres_postcode"] = teBewarenLeerling.postcode;
             //GEMEENTE
-            nieuwItem["cd9i"] = teBewarenLeerling.gemeente;
+            nieuwItem["leerling_adres_gemeente"] = teBewarenLeerling.gemeente;
             //LAND
-            nieuwItem["drdn"] = teBewarenLeerling.land;
-
+            nieuwItem["leerling_adres_land"] = teBewarenLeerling.land;
+            //NATIONALITEIT
+            nieuwItem["eo9y"] = teBewarenLeerling.nationaliteit;
+            //SCHOOLJAAR
+            nieuwItem["ins_schooljaar"] = schooljaar;
+            //GESLACHT
+            if (teBewarenLeerling.geslacht == "M")
+            {
+                nieuwItem["leerling_geslacht"] = "Man";
+            } else
+            {
+                nieuwItem["leerling_geslacht"] = "Vrouw";
+            }     
             //nieuwe gegevens updaten in item lijst
             nieuwItem.Update();
             //

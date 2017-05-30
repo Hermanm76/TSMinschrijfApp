@@ -61,6 +61,8 @@
             this.btn_Leegmaken = new System.Windows.Forms.Button();
             this.txtBox_land = new System.Windows.Forms.TextBox();
             this.lbl_land = new System.Windows.Forms.Label();
+            this.lbl_schooljaar = new System.Windows.Forms.Label();
+            this.cmbbox_Schooljaar = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_pasfoto)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +80,7 @@
             // 
             this.lbl_Inschrijvingen.AutoSize = true;
             this.lbl_Inschrijvingen.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Inschrijvingen.Location = new System.Drawing.Point(327, 36);
+            this.lbl_Inschrijvingen.Location = new System.Drawing.Point(327, 9);
             this.lbl_Inschrijvingen.Name = "lbl_Inschrijvingen";
             this.lbl_Inschrijvingen.Size = new System.Drawing.Size(268, 57);
             this.lbl_Inschrijvingen.TabIndex = 1;
@@ -297,7 +299,7 @@
             // btn_LeerlingLokaalBewaren
             // 
             this.btn_LeerlingLokaalBewaren.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LeerlingLokaalBewaren.Location = new System.Drawing.Point(624, 181);
+            this.btn_LeerlingLokaalBewaren.Location = new System.Drawing.Point(624, 193);
             this.btn_LeerlingLokaalBewaren.Name = "btn_LeerlingLokaalBewaren";
             this.btn_LeerlingLokaalBewaren.Size = new System.Drawing.Size(232, 44);
             this.btn_LeerlingLokaalBewaren.TabIndex = 25;
@@ -308,7 +310,7 @@
             // btn_LeerlingLokaalInladen
             // 
             this.btn_LeerlingLokaalInladen.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LeerlingLokaalInladen.Location = new System.Drawing.Point(624, 231);
+            this.btn_LeerlingLokaalInladen.Location = new System.Drawing.Point(624, 243);
             this.btn_LeerlingLokaalInladen.Name = "btn_LeerlingLokaalInladen";
             this.btn_LeerlingLokaalInladen.Size = new System.Drawing.Size(232, 44);
             this.btn_LeerlingLokaalInladen.TabIndex = 26;
@@ -319,7 +321,7 @@
             // btn_Afsluiten
             // 
             this.btn_Afsluiten.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Afsluiten.Location = new System.Drawing.Point(624, 331);
+            this.btn_Afsluiten.Location = new System.Drawing.Point(624, 356);
             this.btn_Afsluiten.Name = "btn_Afsluiten";
             this.btn_Afsluiten.Size = new System.Drawing.Size(232, 44);
             this.btn_Afsluiten.TabIndex = 27;
@@ -341,7 +343,7 @@
             // btn_Leegmaken
             // 
             this.btn_Leegmaken.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Leegmaken.Location = new System.Drawing.Point(624, 281);
+            this.btn_Leegmaken.Location = new System.Drawing.Point(624, 306);
             this.btn_Leegmaken.Name = "btn_Leegmaken";
             this.btn_Leegmaken.Size = new System.Drawing.Size(232, 44);
             this.btn_Leegmaken.TabIndex = 29;
@@ -367,12 +369,32 @@
             this.lbl_land.TabIndex = 30;
             this.lbl_land.Text = "Land:";
             // 
+            // lbl_schooljaar
+            // 
+            this.lbl_schooljaar.AutoSize = true;
+            this.lbl_schooljaar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_schooljaar.Location = new System.Drawing.Point(282, 88);
+            this.lbl_schooljaar.Name = "lbl_schooljaar";
+            this.lbl_schooljaar.Size = new System.Drawing.Size(104, 22);
+            this.lbl_schooljaar.TabIndex = 32;
+            this.lbl_schooljaar.Text = "Schooljaar:";
+            // 
+            // cmbbox_Schooljaar
+            // 
+            this.cmbbox_Schooljaar.FormattingEnabled = true;
+            this.cmbbox_Schooljaar.Location = new System.Drawing.Point(393, 88);
+            this.cmbbox_Schooljaar.Name = "cmbbox_Schooljaar";
+            this.cmbbox_Schooljaar.Size = new System.Drawing.Size(121, 21);
+            this.cmbbox_Schooljaar.TabIndex = 33;
+            // 
             // Main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(916, 433);
+            this.Controls.Add(this.cmbbox_Schooljaar);
+            this.Controls.Add(this.lbl_schooljaar);
             this.Controls.Add(this.txtBox_land);
             this.Controls.Add(this.lbl_land);
             this.Controls.Add(this.btn_Leegmaken);
@@ -452,6 +474,8 @@
         private System.Windows.Forms.Button btn_Leegmaken;
         private System.Windows.Forms.TextBox txtBox_land;
         private System.Windows.Forms.Label lbl_land;
+        private System.Windows.Forms.Label lbl_schooljaar;
+        private System.Windows.Forms.ComboBox cmbbox_Schooljaar;
     }
 }
 
