@@ -70,19 +70,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A47432BC77374CE0B538E09919C156BA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4B9BA2041FC9ECB9D45F01DA3193E877"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_AD1CDAF3C3F309A457AB4EF677E5DF99"
+        "OwnerKey" = "8:_C0884AF4D7945787A462ADC164AFBAF2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -94,7 +82,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C0884AF4D7945787A462ADC164AFBAF2"
+        "OwnerKey" = "8:_AD1CDAF3C3F309A457AB4EF677E5DF99"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_4B9BA2041FC9ECB9D45F01DA3193E877"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A47432BC77374CE0B538E09919C156BA"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -115,6 +115,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -131,6 +139,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -187,11 +203,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_4B9BA2041FC9ECB9D45F01DA3193E877"
-                    {
-                    "Name" = "8:Microsoft.IdentityModel.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.IdentityModel.dll"
             "TargetName" = "8:"
@@ -218,11 +229,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_6E87E12C5531AF3CED0CC2D73223D86D"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -249,11 +255,6 @@
             "AssemblyAsmDisplayName" = "8:Net.Pkcs11, Version=1.1.5589.20045, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_AD1CDAF3C3F309A457AB4EF677E5DF99"
-                    {
-                    "Name" = "8:Net.Pkcs11.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Net.Pkcs11.dll"
             "TargetName" = "8:"
@@ -280,11 +281,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.SharePoint.Client.Runtime, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_C0884AF4D7945787A462ADC164AFBAF2"
-                    {
-                    "Name" = "8:MICROSOFT.SHAREPOINT.CLIENT.RUNTIME.DLL"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:MICROSOFT.SHAREPOINT.CLIENT.RUNTIME.DLL"
             "TargetName" = "8:"
@@ -311,11 +307,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.SharePoint.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_D7DCD5C9A9F6773D080A36036FC7E303"
-                    {
-                    "Name" = "8:Microsoft.SharePoint.Client.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.SharePoint.Client.dll"
             "TargetName" = "8:"
@@ -402,15 +393,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:TSM Inschrijf App"
-        "ProductCode" = "8:{B68793F1-DE91-4E0E-9A18-A4C7033CCB88}"
-        "PackageCode" = "8:{52F009BE-8AE3-4EE9-9BDC-5166705A6FE2}"
+        "ProductCode" = "8:{CD248F98-01B5-4469-BF39-0DAD3203C377}"
+        "PackageCode" = "8:{8700C15C-0587-41D6-AC46-E0B1AB8693D7}"
         "UpgradeCode" = "8:{2B1FAEDD-4A77-422C-B4DA-574383518779}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.2"
         "Manufacturer" = "8:Herman Messagie"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
