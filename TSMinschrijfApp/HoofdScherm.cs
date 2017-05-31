@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
-
 namespace TSMinschrijfApp
 {
     public partial class Main_form : Form
@@ -107,6 +105,9 @@ namespace TSMinschrijfApp
                         aanmaken.LeerlingBewarenInSharepointList(leerling,cmbbox_Schooljaar.SelectedItem.ToString());
                         leerling.leegMaken();
                         formUpdaten(leerling);
+                        this.btn_Leegmaken.Enabled = false;
+                        this.btn_LeerlingAanmaken.Enabled = false;
+                        this.btn_LeerlingLokaalBewaren.Enabled = false;
                     } else
                     {
                         MessageBox.Show("adres niet correct!");
@@ -115,8 +116,7 @@ namespace TSMinschrijfApp
                 else
                 {
                     MessageBox.Show("Leerling bestaat al!", "Melding");
-                }
-                
+                }         
             }
             catch (Exception)
             {
@@ -127,9 +127,7 @@ namespace TSMinschrijfApp
             }
             this.Enabled = true;
             this.Cursor = Cursors.Arrow;
-            this.btn_Leegmaken.Enabled = false;
-            this.btn_LeerlingAanmaken.Enabled = false;
-            this.btn_LeerlingLokaalBewaren.Enabled = false;
+            
         }
         //straat controle voor opsplitsing string naar straat + nr + bus
         private Boolean straatControleren(Leerling leerling)
