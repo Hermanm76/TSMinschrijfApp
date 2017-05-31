@@ -39,7 +39,7 @@
             this.txtbox_Bus = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_straatcontrolescherm_GaVerder = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -125,25 +125,26 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Kan straat, huisnr en bus niet automatisch herkennen.";
             // 
-            // button1
+            // btn_straatcontrolescherm_GaVerder
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(209, 190);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Ga verder met aanmaken";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_straatcontrolescherm_GaVerder.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btn_straatcontrolescherm_GaVerder.Location = new System.Drawing.Point(209, 190);
+            this.btn_straatcontrolescherm_GaVerder.Name = "btn_straatcontrolescherm_GaVerder";
+            this.btn_straatcontrolescherm_GaVerder.Size = new System.Drawing.Size(146, 23);
+            this.btn_straatcontrolescherm_GaVerder.TabIndex = 10;
+            this.btn_straatcontrolescherm_GaVerder.Text = "Ga verder met aanmaken";
+            this.btn_straatcontrolescherm_GaVerder.UseVisualStyleBackColor = true;
+            this.btn_straatcontrolescherm_GaVerder.Click += new System.EventHandler(this.button1_Click);
             // 
             // StraatControleScherm
             // 
+            this.AcceptButton = this.btn_straatcontrolescherm_GaVerder;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(450, 241);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_straatcontrolescherm_GaVerder);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtbox_Bus);
@@ -176,6 +177,6 @@
         private System.Windows.Forms.TextBox txtbox_Bus;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_straatcontrolescherm_GaVerder;
     }
 }

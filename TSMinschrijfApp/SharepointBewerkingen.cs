@@ -87,7 +87,6 @@ namespace TSMinschrijfApp
                 if (teControlerenLeerling.nationaalnummer.Equals(listItem["mofc"]))
                 {
                     //leerling ID terug sturen voor opbouw URL
-                    MessageBox.Show(listItem["ID"].ToString());
                     return listItem["ID"].ToString();
                 }
             }

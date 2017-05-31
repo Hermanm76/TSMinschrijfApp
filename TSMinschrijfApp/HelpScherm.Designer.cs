@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HelpScherm));
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_helpscherm_sluiten = new System.Windows.Forms.Button();
             this.lbl_versienr = new System.Windows.Forms.Label();
             this.lbl_projectwerk = new System.Windows.Forms.Label();
             this.lbl_dev = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_helpscherm_sluiten
             // 
-            this.button1.Location = new System.Drawing.Point(149, 232);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Sluiten";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_helpscherm_sluiten.Location = new System.Drawing.Point(149, 232);
+            this.btn_helpscherm_sluiten.Name = "btn_helpscherm_sluiten";
+            this.btn_helpscherm_sluiten.Size = new System.Drawing.Size(75, 23);
+            this.btn_helpscherm_sluiten.TabIndex = 0;
+            this.btn_helpscherm_sluiten.Text = "Sluiten";
+            this.btn_helpscherm_sluiten.UseVisualStyleBackColor = true;
+            this.btn_helpscherm_sluiten.Click += new System.EventHandler(this.button1_Click);
             // 
             // lbl_versienr
             // 
@@ -85,6 +85,7 @@
             // 
             // HelpScherm
             // 
+            this.AcceptButton = this.btn_helpscherm_sluiten;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
@@ -93,7 +94,7 @@
             this.Controls.Add(this.lbl_dev);
             this.Controls.Add(this.lbl_projectwerk);
             this.Controls.Add(this.lbl_versienr);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_helpscherm_sluiten);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HelpScherm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -105,7 +106,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_helpscherm_sluiten;
         private System.Windows.Forms.Label lbl_versienr;
         private System.Windows.Forms.Label lbl_projectwerk;
         private System.Windows.Forms.Label lbl_dev;
