@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -82,7 +83,6 @@ namespace TSMinschrijfApp
         //leerling met ingelezen gegevens aanmaken in sharepoint
         private void btn_LeerlingAanmaken_Click(object sender, EventArgs e)
         {
-
             SharepointBewerkingen aanmaken = new SharepointBewerkingen(gebruikerCr.gebruikerEmail, gebruikerCr.gebruikerPaswoord);
             try
             {
@@ -102,18 +102,19 @@ namespace TSMinschrijfApp
                 {
                     MessageBox.Show("Leerling bestaat al!", "Melding");
                 }
+                Process.Start("https://technischescholenmechel.sharepoint.com/TSM%20Globaal/Lists/MS%20Inschrijvingen%20%20TEST/Overzicht.aspx");
             }
             catch (Exception)
             {
                 MessageBox.Show("Probleem met Sharepoint verbinding. Controleer gebruikersnaam en wachtwoord", "Melding");
                 UserInputBox invoerBox = new UserInputBox(gebruikerCr, this);
                 invoerBox.Show();
+                //btn_LeerlingAanmaken.PerformClick();
             }      
         }
-        //nog grondig nakijken en testen
+        //straat controle voor opsplitsing string naar straat + nr + bus
         private Boolean straatControleren(Leerling leerling)
         {
-
             string[] str = leerling.straat.Split(' ');
             //voor een adres bestaande uit straat (in 1 woord) + nr
             if (str.Length == 2)
@@ -128,7 +129,6 @@ namespace TSMinschrijfApp
                 leerling.huisNr = str[2];
                 return true;
             }
-
             straatControle = new StraatControleScherm(leerling);
             var testAdres = straatControle.ShowDialog();
             if(testAdres == DialogResult.OK)
@@ -137,9 +137,7 @@ namespace TSMinschrijfApp
             } else {
                 return false;
             }
-            
         }
-
         private void Main_form_Load(object sender, EventArgs e)
         {
             //opvullen combobox voor het schooljaar en selectie instellen
@@ -152,7 +150,6 @@ namespace TSMinschrijfApp
             invoerBox.Focus();
             invoerBox.Show();
         }
-
         private void btn_Help_Click(object sender, EventArgs e)
         {
             HelpScherm help = new HelpScherm();
