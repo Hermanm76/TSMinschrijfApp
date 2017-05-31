@@ -81,14 +81,13 @@ namespace TSMinschrijfApp
             // Retrieve all items in the ListItemCollection from List.GetItems(Query). 
             context.Load(items);
             context.ExecuteQuery();
-            MessageBox.Show("Tot hier geraak ik");
             foreach (ListItem listItem in items)
             {
-                
                 // juiste leerling opzoeken op bass van nationaalnummer. 
                 if (teControlerenLeerling.nationaalnummer.Equals(listItem["mofc"]))
                 {
                     //leerling ID terug sturen voor opbouw URL
+                    MessageBox.Show(listItem["ID"].ToString());
                     return listItem["ID"].ToString();
                 }
             }
@@ -96,8 +95,7 @@ namespace TSMinschrijfApp
             return "Leerling niet gevonden";
         }
         public void  LeerlingBewarenInSharepointList(Leerling teBewarenLeerling,String schooljaar)
-        {
-            
+        {          
             var securePassword = new SecureString();
             foreach (var c in paswoord)
             {
@@ -155,18 +153,13 @@ namespace TSMinschrijfApp
             }     
             //nieuwe gegevens updaten in item lijst
             nieuwItem.Update();
-            //
-
-
-
             //de aanmaak query uitvoeren tegenover de sharepoint server.
             context.ExecuteQuery();
-
             //laten weten dat leerling aangemaakt is
             DialogResult dResult = MessageBox.Show("Leerling is aangemaakt. Verder gaan op inschrijvingssite ?", "Inschrijving resultaat", MessageBoxButtons.OKCancel);
             if (dResult == DialogResult.OK)
             {
-                if (VraagContentId(teBewarenLeerling) == "Leerling niet gevonden")
+                if (!(VraagContentId(teBewarenLeerling) == "Leerling niet gevonden"))
                 {
                     String url = "https://technischescholenmechel.sharepoint.com/TSM%20Globaal/Lists/MS%20Inschrijvingen%20%20TEST/Item/editifs.aspx?List=fac6218d%2D5da6%2D4dd4%2D9f27%2Dd51e2306b156&ID=" + VraagContentId(teBewarenLeerling) + "&Source=https%3A%2F%2Ftechnischescholenmechel%2Esharepoint%2Ecom%2FTSM%2520Globaal%2FLists%2FMS%2520Inschrijvingen%2520%2520TEST%2FOverzicht%2Easpx&ContentTypeId=0x0100F6FB02CA6D57EC41B63B32BBDE8F5824";
                     Process.Start(url);

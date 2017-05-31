@@ -10,6 +10,9 @@ namespace TSMinschrijfApp
         public Main_form()
         {
             InitializeComponent();
+            this.btn_Leegmaken.Enabled = false;
+            this.btn_LeerlingAanmaken.Enabled = false;
+            this.btn_LeerlingLokaalBewaren.Enabled = false;
         }
         //De nodige variabelen aanmaken bij opstart 
         private gebruikerCredentials gebruikerCr = new gebruikerCredentials();
@@ -37,6 +40,9 @@ namespace TSMinschrijfApp
                     //land vastzetten op belgie aangezien het over een belgische EID gaat
                     leerling.land = "Belgie";
                     formUpdaten(leerling);
+                    this.btn_LeerlingLokaalBewaren.Enabled = true;
+                    this.btn_LeerlingAanmaken.Enabled = true;
+                    this.btn_Leegmaken.Enabled = true;
                 }
             }      
         }
@@ -67,6 +73,9 @@ namespace TSMinschrijfApp
         {
             leerling.leegMaken();
             formUpdaten(leerling);
+            this.btn_Leegmaken.Enabled = false;
+            this.btn_LeerlingAanmaken.Enabled = false;
+            this.btn_LeerlingLokaalBewaren.Enabled = false;
         }
         //leerling lokaal bewaren op de hardeschijf. bv. bij probleem met internet verbinding
         private void btn_LeerlingLokaalBewaren_Click(object sender, EventArgs e)
@@ -79,10 +88,15 @@ namespace TSMinschrijfApp
         {
             leerling = bewaren.LaadLeerling();
             formUpdaten(leerling);
+            this.btn_LeerlingAanmaken.Enabled = true;
+            this.btn_LeerlingLokaalBewaren.Enabled = true;
+            this.btn_Leegmaken.Enabled = true;
         }
         //leerling met ingelezen gegevens aanmaken in sharepoint
         private void btn_LeerlingAanmaken_Click(object sender, EventArgs e)
         {
+            this.Enabled = false;
+            this.Cursor = Cursors.WaitCursor;
             SharepointBewerkingen aanmaken = new SharepointBewerkingen(gebruikerCr.gebruikerEmail, gebruikerCr.gebruikerPaswoord);
             try
             {
@@ -110,7 +124,9 @@ namespace TSMinschrijfApp
                 UserInputBox invoerBox = new UserInputBox(gebruikerCr, this);
                 invoerBox.Show();
                 //btn_LeerlingAanmaken.PerformClick();
-            }      
+            }
+            this.Enabled = true;
+            this.Cursor = Cursors.Arrow;
         }
         //straat controle voor opsplitsing string naar straat + nr + bus
         private Boolean straatControleren(Leerling leerling)
