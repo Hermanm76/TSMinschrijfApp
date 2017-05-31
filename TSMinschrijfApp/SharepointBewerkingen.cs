@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Security;
 using Microsoft.SharePoint.Client;
+using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace TSMinschrijfApp
 {
@@ -125,8 +127,11 @@ namespace TSMinschrijfApp
             context.ExecuteQuery();
 
             //laten weten dat leerling aangemaakt is
-            System.Windows.Forms.MessageBox.Show("Leerling is aangemaakt", "Melding");
-
+            DialogResult dResult = MessageBox.Show("Leerling is aangemaakt. Verder gaan op inschrijvingssite ?", "Inschrijving resultaat", MessageBoxButtons.OKCancel);
+            if (dResult == DialogResult.OK)
+            {
+                Process.Start("https://technischescholenmechel.sharepoint.com/TSM%20Globaal/Lists/MS%20Inschrijvingen%20%20TEST/Overzicht.aspx");
+            }
         }
     }
 }

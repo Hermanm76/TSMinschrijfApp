@@ -102,7 +102,7 @@ namespace TSMinschrijfApp
                 {
                     MessageBox.Show("Leerling bestaat al!", "Melding");
                 }
-                Process.Start("https://technischescholenmechel.sharepoint.com/TSM%20Globaal/Lists/MS%20Inschrijvingen%20%20TEST/Overzicht.aspx");
+                
             }
             catch (Exception)
             {
