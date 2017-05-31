@@ -127,6 +127,9 @@ namespace TSMinschrijfApp
             }
             this.Enabled = true;
             this.Cursor = Cursors.Arrow;
+            this.btn_Leegmaken.Enabled = false;
+            this.btn_LeerlingAanmaken.Enabled = false;
+            this.btn_LeerlingLokaalBewaren.Enabled = false;
         }
         //straat controle voor opsplitsing string naar straat + nr + bus
         private Boolean straatControleren(Leerling leerling)
