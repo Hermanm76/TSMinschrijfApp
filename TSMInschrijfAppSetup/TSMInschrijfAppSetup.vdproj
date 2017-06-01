@@ -70,19 +70,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6E87E12C5531AF3CED0CC2D73223D86D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C0884AF4D7945787A462ADC164AFBAF2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D7DCD5C9A9F6773D080A36036FC7E303"
+        "OwnerKey" = "8:_4B9BA2041FC9ECB9D45F01DA3193E877"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -94,7 +82,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4B9BA2041FC9ECB9D45F01DA3193E877"
+        "OwnerKey" = "8:_D7DCD5C9A9F6773D080A36036FC7E303"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C0884AF4D7945787A462ADC164AFBAF2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_6E87E12C5531AF3CED0CC2D73223D86D"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -409,15 +409,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:TSM Inschrijf App"
-        "ProductCode" = "8:{9EE66406-A625-4D74-8231-49868BE1BE04}"
-        "PackageCode" = "8:{B8604E2A-7EC1-40F7-970C-7D3DBFA2D10C}"
+        "ProductCode" = "8:{35A71417-9415-4FC7-AA53-B6ACCEEE1C90}"
+        "PackageCode" = "8:{995DCD37-2B42-48CA-BB81-5856B41843B1}"
         "UpgradeCode" = "8:{2B1FAEDD-4A77-422C-B4DA-574383518779}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.4"
+        "ProductVersion" = "8:1.0.5"
         "Manufacturer" = "8:Herman Messagie"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -959,7 +959,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A47432BC77374CE0B538E09919C156BA"
             {
-            "SourcePath" = "8:..\\TSMinschrijfApp\\obj\\x86\\Release\\TSMinschrijfApp.exe"
+            "SourcePath" = "8:..\\TSMinschrijfApp\\obj\\x86\\Debug\\TSMinschrijfApp.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_51AE3F3503C949CEAFF9764AD0713D67"

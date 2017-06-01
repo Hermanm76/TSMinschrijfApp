@@ -32,8 +32,8 @@ namespace TSMinschrijfApp
 
         private void StraatControleScherm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //form niet afsluiten als huisnr en busnr niet aangepast zijn
-            if (txtbox_HuisNr.Text == "" || txtbox_Bus.Text == "")
+            //form niet afsluiten als straat of huisnr niet aangepast zijn
+            if (txtbox_HuisNr.Text == "" || txtbox_StraatZonderHuisNr.Text == "")
             {
                 e.Cancel = true;
             }

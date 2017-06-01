@@ -41,6 +41,7 @@ namespace TSMinschrijfApp
                     this.btn_LeerlingLokaalBewaren.Enabled = true;
                     this.btn_LeerlingAanmaken.Enabled = true;
                     this.btn_Leegmaken.Enabled = true;
+                    idinlezen.Dispose();
                 }
             }      
         }
