@@ -51,9 +51,9 @@
             this.lbl_versienr.AutoSize = true;
             this.lbl_versienr.Location = new System.Drawing.Point(259, 224);
             this.lbl_versienr.Name = "lbl_versienr";
-            this.lbl_versienr.Size = new System.Drawing.Size(57, 13);
+            this.lbl_versienr.Size = new System.Drawing.Size(66, 13);
             this.lbl_versienr.TabIndex = 1;
-            this.lbl_versienr.Text = "Versie: 1.0";
+            this.lbl_versienr.Text = "Versie: 1.0.6";
             // 
             // lbl_projectwerk
             // 

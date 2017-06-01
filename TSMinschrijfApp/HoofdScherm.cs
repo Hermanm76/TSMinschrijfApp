@@ -28,6 +28,8 @@ namespace TSMinschrijfApp
         }
         private void btn_IdInlezen_Click(object sender, EventArgs e)
         {
+            this.Enabled = false;
+            this.Cursor = Cursors.WaitCursor;
             //using gebruiken om ervoor te zorgen dat het na gebruik niet in het geheugen blijft hangen
             using (EIDinleesCode idinlezen = new EIDinleesCode())
             {
@@ -41,9 +43,11 @@ namespace TSMinschrijfApp
                     this.btn_LeerlingLokaalBewaren.Enabled = true;
                     this.btn_LeerlingAanmaken.Enabled = true;
                     this.btn_Leegmaken.Enabled = true;
-                    idinlezen.Dispose();
+                    //idinlezen.Dispose();
                 }
-            }      
+            }
+            this.Enabled = true;
+            this.Cursor = Cursors.Arrow;
         }
         private void formUpdaten(Leerling leerling)
         {
