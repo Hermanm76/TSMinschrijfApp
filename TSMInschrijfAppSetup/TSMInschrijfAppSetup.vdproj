@@ -219,6 +219,11 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_4B9BA2041FC9ECB9D45F01DA3193E877"
+                    {
+                    "Name" = "8:Microsoft.IdentityModel.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Microsoft.IdentityModel.dll"
             "TargetName" = "8:"
@@ -245,6 +250,11 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
+                    "_6E87E12C5531AF3CED0CC2D73223D86D"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -271,6 +281,11 @@
             "AssemblyAsmDisplayName" = "8:Net.Pkcs11, Version=1.1.5589.20045, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
+                    "_AD1CDAF3C3F309A457AB4EF677E5DF99"
+                    {
+                    "Name" = "8:Net.Pkcs11.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Net.Pkcs11.dll"
             "TargetName" = "8:"
@@ -297,6 +312,11 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.SharePoint.Client.Runtime, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_C0884AF4D7945787A462ADC164AFBAF2"
+                    {
+                    "Name" = "8:MICROSOFT.SHAREPOINT.CLIENT.RUNTIME.DLL"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:MICROSOFT.SHAREPOINT.CLIENT.RUNTIME.DLL"
             "TargetName" = "8:"
@@ -323,6 +343,11 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.SharePoint.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_D7DCD5C9A9F6773D080A36036FC7E303"
+                    {
+                    "Name" = "8:Microsoft.SharePoint.Client.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Microsoft.SharePoint.Client.dll"
             "TargetName" = "8:"
@@ -409,15 +434,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:TSM Inschrijf App"
-        "ProductCode" = "8:{8AA4EC4D-0AB1-49BD-AF14-F4FE00EA5590}"
-        "PackageCode" = "8:{9F6DFE0B-2791-414F-B372-9CBD44554B28}"
+        "ProductCode" = "8:{3DAC216C-866E-4036-97E5-C117C39B3212}"
+        "PackageCode" = "8:{4C21BDA6-9DD9-4907-BB07-B0BA0393C50B}"
         "UpgradeCode" = "8:{2B1FAEDD-4A77-422C-B4DA-574383518779}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.1.0"
+        "ProductVersion" = "8:1.1.1"
         "Manufacturer" = "8:Herman Messagie"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -959,7 +984,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A47432BC77374CE0B538E09919C156BA"
             {
-            "SourcePath" = "8:..\\TSMinschrijfApp\\obj\\x86\\Debug\\TSMinschrijfApp.exe"
+            "SourcePath" = "8:..\\TSMinschrijfApp\\obj\\x86\\Release\\TSMinschrijfApp.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_51AE3F3503C949CEAFF9764AD0713D67"
