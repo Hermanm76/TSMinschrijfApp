@@ -89,11 +89,17 @@ namespace TSMinschrijfApp
         //lokaal opgeslagen leerling terug inladen
         private void btn_LeerlingLokaalInladen_Click(object sender, EventArgs e)
         {
-            leerling = bewaren.LaadLeerling();
-            formUpdaten(leerling);
-            this.btn_LeerlingAanmaken.Enabled = true;
-            this.btn_LeerlingLokaalBewaren.Enabled = true;
-            this.btn_Leegmaken.Enabled = true;
+            
+                leerling = bewaren.LaadLeerling();
+                if(!(leerling.naam == ""))
+            {
+                formUpdaten(leerling);
+                this.btn_LeerlingAanmaken.Enabled = true;
+                this.btn_LeerlingLokaalBewaren.Enabled = true;
+            } else
+            {
+                MessageBox.Show("Er is geen leerling geladen. Lees een EID in of selecteer een leerling bestand.");
+            }
         }
         //leerling met ingelezen gegevens aanmaken in sharepoint
         private void btn_LeerlingAanmaken_Click(object sender, EventArgs e)

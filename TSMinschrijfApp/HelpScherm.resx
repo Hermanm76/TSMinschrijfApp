@@ -125,8 +125,9 @@
 5. Klik "Leerling Aanmaken" voor het wegschrijven naar de Sharepoint Site
 6. Indien nodig corrigeer de straat, huisnr en Bus gegevens.
 7. Als leerling al bestaat krijg je een Melding
-8. Bij netwerk problemen kan je de EID lokaal bewaren via "Lokaal Bewaren" knop
-9. Voor het lokaal inlezen kies je de juiste lokatie en leerling bestand daarna kan je deze aanmaken
+8. Als de leerling correct is aangemaakt kan je kiezen om rechtstreeks naar de inschrijvingssite te gaan
+9. Bij netwerk problemen kan je de EID lokaal bewaren via "Lokaal Bewaren" knop
+10. Voor het lokaal inlezen kies je de juiste lokatie en leerling bestand daarna kan je deze aanmaken
 </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />

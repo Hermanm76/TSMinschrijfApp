@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TSMinschrijfApp.Bewaren">
+    <Position X="8.25" Y="0.5" Width="1.75" />
+    <Members>
+      <Field Name="reader" Hidden="true" />
+      <Field Name="writer" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAQAAQAAQAIA=</HashCode>
+      <FileName>Bewaren.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TSMinschrijfApp.EIDinleesCode" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="1" Width="1.75" />
+    <Members>
+      <Field Name="disposedValue" Hidden="true" />
+      <Field Name="m" Hidden="true" />
+      <Field Name="mFileName" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ACAYAAQAACAAIAAAABAAAAAAAIQAiAAAggAIApIAAAA=</HashCode>
+      <FileName>EIDinleesCode.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.273" Collapsed="true" />
+  </Class>
+  <Class Name="TSMinschrijfApp.gebruikerCredentials">
+    <Position X="11.5" Y="5" Width="2.75" />
+    <Members>
+      <Field Name="gebruikerEmail" Hidden="true" />
+      <Field Name="gebruikerPaswoord" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>gebruikerCredentials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TSMinschrijfApp.HelpScherm">
+    <Position X="11.25" Y="0.75" Width="1.75" />
+    <Members>
+      <Field Name="btn_helpscherm_sluiten" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="lbl_dev" Hidden="true" />
+      <Field Name="lbl_projectwerk" Hidden="true" />
+      <Field Name="lbl_versienr" Hidden="true" />
+      <Field Name="textBox1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACBAAAACAIAAAAAACAAAACAAAAACAAEEAAAAAAAAA=</HashCode>
+      <FileName>HelpScherm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TSMinschrijfApp.Main_form">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <Members>
+      <Field Name="bewaren" Hidden="true" />
+      <Field Name="btn_Afsluiten" Hidden="true" />
+      <Field Name="btn_Help" Hidden="true" />
+      <Field Name="btn_IdInlezen" Hidden="true" />
+      <Field Name="btn_Leegmaken" Hidden="true" />
+      <Field Name="btn_LeerlingAanmaken" Hidden="true" />
+      <Field Name="btn_LeerlingLokaalBewaren" Hidden="true" />
+      <Field Name="btn_LeerlingLokaalInladen" Hidden="true" />
+      <Field Name="cmbbox_Schooljaar" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="gebruikerCr" Hidden="true" />
+      <Field Name="invoerBox" Hidden="true" />
+      <Field Name="Jaar" Hidden="true" />
+      <Field Name="lbl_Foto" Hidden="true" />
+      <Field Name="lbl_GeboorteDatum" Hidden="true" />
+      <Field Name="lbl_GeboortePlaats" Hidden="true" />
+      <Field Name="lbl_Gemeente" Hidden="true" />
+      <Field Name="lbl_Geslacht" Hidden="true" />
+      <Field Name="lbl_Inschrijvingen" Hidden="true" />
+      <Field Name="lbl_land" Hidden="true" />
+      <Field Name="lbl_Naam" Hidden="true" />
+      <Field Name="lbl_NationaalNummer" Hidden="true" />
+      <Field Name="lbl_Nationaliteit" Hidden="true" />
+      <Field Name="lbl_Postcode" Hidden="true" />
+      <Field Name="lbl_schooljaar" Hidden="true" />
+      <Field Name="lbl_Straat" Hidden="true" />
+      <Field Name="lbl_Voornaam" Hidden="true" />
+      <Field Name="leerling" Hidden="true" />
+      <Field Name="picBox_pasfoto" Hidden="true" />
+      <Field Name="picturebox_logo" Hidden="true" />
+      <Field Name="straatControle" Hidden="true" />
+      <Field Name="txtbox_GeboorteDatum" Hidden="true" />
+      <Field Name="txtbox_GeboortePlaats" Hidden="true" />
+      <Field Name="txtbox_Gemeente" Hidden="true" />
+      <Field Name="txtbox_Geslacht" Hidden="true" />
+      <Field Name="txtBox_land" Hidden="true" />
+      <Field Name="txtbox_Naam" Hidden="true" />
+      <Field Name="txtbox_NationaalNummer" Hidden="true" />
+      <Field Name="txtbox_Nationaliteit" Hidden="true" />
+      <Field Name="txtbox_Postcode" Hidden="true" />
+      <Field Name="txtbox_Straat" Hidden="true" />
+      <Field Name="txtbox_Voornaam" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>UARCAEQQECAAAYAIhCCwhgAmIhGmhADgwAGAAAABxoE=</HashCode>
+      <FileName>HoofdScherm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TSMinschrijfApp.Leerling">
+    <Position X="5.5" Y="1" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ACAIEAQCACAAIAAAAAAYAgAAAIQAiAAAgIAIAIIAAAA=</HashCode>
+      <FileName>Leerling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TSMinschrijfApp.Program" Collapsed="true">
+    <Position X="11.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TSMinschrijfApp.SharepointBewerkingen">
+    <Position X="8.25" Y="5" Width="2.5" />
+    <Members>
+      <Field Name="context" Hidden="true" />
+      <Field Name="credentials" Hidden="true" />
+      <Field Name="paswoord" Hidden="true" />
+      <Field Name="userName" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAACAAAAEAACAAAAAAAAAABAAAAAEAAAA=</HashCode>
+      <FileName>SharepointBewerkingen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TSMinschrijfApp.StraatControleScherm">
+    <Position X="8.75" Y="2.75" Width="2.75" />
+    <Members>
+      <Field Name="btn_straatcontrolescherm_GaVerder" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="leerling" Hidden="true" />
+      <Field Name="txtbox_Bus" Hidden="true" />
+      <Field Name="txtbox_HuisNr" Hidden="true" />
+      <Field Name="txtbox_StraatZonderHuisNr" Hidden="true" />
+      <Field Name="txtbox_VolledigeStraat" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQADAAABAAAQCAAAACAAAAgAAEAEAAAAAAQAQ=</HashCode>
+      <FileName>StraatControleScherm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TSMinschrijfApp.UserInputBox">
+    <Position X="1" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAGAAACCAAABAgAACAAAACQAAAAABAACAAAABAAAA=</HashCode>
+      <FileName>UserInputBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TSMinschrijfApp.Properties.Resources" Collapsed="true">
+    <Position X="12.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TSMinschrijfApp.Properties.Settings" Collapsed="true">
+    <Position X="9.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -53,7 +53,7 @@
             this.lbl_versienr.Name = "lbl_versienr";
             this.lbl_versienr.Size = new System.Drawing.Size(66, 13);
             this.lbl_versienr.TabIndex = 1;
-            this.lbl_versienr.Text = "Versie: 1.0.6";
+            this.lbl_versienr.Text = "Versie: 1.0.7";
             // 
             // lbl_projectwerk
             // 

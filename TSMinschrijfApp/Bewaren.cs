@@ -1,4 +1,6 @@
 ﻿using System.IO;
+using System.Windows.Forms;
+
 namespace TSMinschrijfApp
 {
     class Bewaren
@@ -15,43 +17,51 @@ namespace TSMinschrijfApp
         //methode om een leerling te gaan bewaren
         public void BewaarLeerling()
         {
-            try
+            //Folder kiezen en volledige bestandsnaam en locatie aanmaken voor de FileStream
+            string folderPath = "";
+            FolderBrowserDialog directchoosedlg = new FolderBrowserDialog();
+            if (directchoosedlg.ShowDialog() == DialogResult.OK)
             {
-                //writer aanmaken om de leerling lokaal te bewaren met als bestandsnaam naam en voornaam van de leerling.
-                writer = new BinaryWriter(new FileStream(TeBewarenLeerling.naam+TeBewarenLeerling.voornaam, FileMode.Create));
+                folderPath = directchoosedlg.SelectedPath + "\\" + TeBewarenLeerling.naam + TeBewarenLeerling.voornaam;
+            
+                try
+                {
+                    //writer aanmaken om de leerling lokaal te bewaren met als bestandsnaam naam en voornaam van de leerling.
+                    writer = new BinaryWriter(new FileStream(folderPath, FileMode.Create));
+                }
+                catch (IOException)
+                {
+                    //message box dat er door een fout geen bestand lokaal kan aangemaakt worden
+                    System.Windows.Forms.MessageBox.Show("Kan leerling niet lokaal bewaren.", "Melding");
+                    return;
+                }
+                try
+                {
+                    //de gegeven leerling weg schrijven naar het geopende bestand
+                    writer.Write(TeBewarenLeerling.naam);
+                    writer.Write(TeBewarenLeerling.voornaam);
+                    writer.Write(TeBewarenLeerling.geboorteplaats);
+                    writer.Write(TeBewarenLeerling.geboortedatum);
+                    writer.Write(TeBewarenLeerling.nationaliteit);
+                    writer.Write(TeBewarenLeerling.geslacht);
+                    writer.Write(TeBewarenLeerling.nationaalnummer);
+                    writer.Write(TeBewarenLeerling.straat);
+                    writer.Write(TeBewarenLeerling.postcode);
+                    writer.Write(TeBewarenLeerling.gemeente);
+                    writer.Write(TeBewarenLeerling.land);
+                    writer.Write(TeBewarenLeerling.pasfoto.Length);
+                    writer.Write(TeBewarenLeerling.pasfoto);
+                }
+                catch (IOException)
+                {
+                    //message box geven dat er niet naar het bestand kan geschreven worden
+                    System.Windows.Forms.MessageBox.Show("\n Kan niet naar bestand schrijven.");
+                }
+                //writer afsluiten
+                writer.Close();
+                //bevestiging laten zien dat leerling correct is weggeschreven
+                System.Windows.Forms.MessageBox.Show("Leerling lokaal opgeslagen.");
             }
-            catch (IOException)
-            {
-                //message box dat er door een fout geen bestand lokaal kan aangemaakt worden
-                System.Windows.Forms.MessageBox.Show("Kan leerling niet lokaal bewaren.","Melding");
-                return;
-            }
-            try
-            {
-                //de gegeven leerling weg schrijven naar het geopende bestand
-                writer.Write(TeBewarenLeerling.naam);
-                writer.Write(TeBewarenLeerling.voornaam);
-                writer.Write(TeBewarenLeerling.geboorteplaats);
-                writer.Write(TeBewarenLeerling.geboortedatum);
-                writer.Write(TeBewarenLeerling.nationaliteit);
-                writer.Write(TeBewarenLeerling.geslacht);
-                writer.Write(TeBewarenLeerling.nationaalnummer);
-                writer.Write(TeBewarenLeerling.straat);
-                writer.Write(TeBewarenLeerling.postcode);
-                writer.Write(TeBewarenLeerling.gemeente);
-                writer.Write(TeBewarenLeerling.land);
-                writer.Write(TeBewarenLeerling.pasfoto.Length);
-                writer.Write(TeBewarenLeerling.pasfoto);                
-            }
-            catch (IOException)
-            {
-                //message box geven dat er niet naar het bestand kan geschreven worden
-                System.Windows.Forms.MessageBox.Show("\n Kan niet naar bestand schrijven.");                
-            }
-            //writer afsluiten
-            writer.Close();
-            //bevestiging laten zien dat leerling correct is weggeschreven
-            System.Windows.Forms.MessageBox.Show("Leerling lokaal opgeslagen.");
         }
         //methode om een leerling van een gekozen bestand te gaan inlezen en laten zien in het formulier.
         public Leerling LaadLeerling()
