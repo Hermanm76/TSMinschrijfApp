@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace TSMinschrijfApp
 {
@@ -98,34 +99,39 @@ namespace TSMinschrijfApp
             //gebruik hiervoor een methode om standaard deze als string te laten voor het bewaren op schijf
             
             string[] d = geboortedatum.Split(Convert.ToChar(" "));
-            
+            int jaarArrayIndex = 3;
+
+            if(d.Length == 3)
+            {
+                jaarArrayIndex = 2;
+            }
 
             switch (d[1].ToLower().Substring(0, 3))
             {
                 case "jan":
-                    return new System.DateTime(Convert.ToInt32(d[3]), 1, Convert.ToInt32(d[0]));
+                    return new System.DateTime(Convert.ToInt32(d[jaarArrayIndex]), 1, Convert.ToInt32(d[0]));
                 case "feb":
-                    return new System.DateTime(Convert.ToInt32(d[3]), 2, Convert.ToInt32(d[0]));
+                    return new System.DateTime(Convert.ToInt32(d[jaarArrayIndex]), 2, Convert.ToInt32(d[0]));
                 case "maa":
-                    return new System.DateTime(Convert.ToInt32(d[3]), 3, Convert.ToInt32(d[0]));
+                    return new System.DateTime(Convert.ToInt32(d[jaarArrayIndex]), 3, Convert.ToInt32(d[0]));
                 case "apr":
-                    return new System.DateTime(Convert.ToInt32(d[3]), 4, Convert.ToInt32(d[0]));
+                    return new System.DateTime(Convert.ToInt32(d[jaarArrayIndex]), 4, Convert.ToInt32(d[0]));
                 case "mei":
-                    return new System.DateTime(Convert.ToInt32(d[3]), 5, Convert.ToInt32(d[0]));
+                    return new System.DateTime(Convert.ToInt32(d[jaarArrayIndex]), 5, Convert.ToInt32(d[0]));
                 case "jun":
-                    return new System.DateTime(Convert.ToInt32(d[3]), 6, Convert.ToInt32(d[0]));
+                    return new System.DateTime(Convert.ToInt32(d[jaarArrayIndex]), 6, Convert.ToInt32(d[0]));
                 case "jul":
-                    return new System.DateTime(Convert.ToInt32(d[3]), 7, Convert.ToInt32(d[0]));
+                    return new System.DateTime(Convert.ToInt32(d[jaarArrayIndex]), 7, Convert.ToInt32(d[0]));
                 case "aug":
-                    return new System.DateTime(Convert.ToInt32(d[3]), 8, Convert.ToInt32(d[0]));
+                    return new System.DateTime(Convert.ToInt32(d[jaarArrayIndex]), 8, Convert.ToInt32(d[0]));
                 case "sep":
-                    return new System.DateTime(Convert.ToInt32(d[3]), 9, Convert.ToInt32(d[0]));
+                    return new System.DateTime(Convert.ToInt32(d[jaarArrayIndex]), 9, Convert.ToInt32(d[0]));
                 case "okt":
-                    return new System.DateTime(Convert.ToInt32(d[3]), 10, Convert.ToInt32(d[0]));
+                    return new System.DateTime(Convert.ToInt32(d[jaarArrayIndex]), 10, Convert.ToInt32(d[0]));
                 case "nov":
-                    return new System.DateTime(Convert.ToInt32(d[3]), 11, Convert.ToInt32(d[0]));
+                    return new System.DateTime(Convert.ToInt32(d[jaarArrayIndex]), 11, Convert.ToInt32(d[0]));
                 case "dec":
-                    return new System.DateTime(Convert.ToInt32(d[3]), 12, Convert.ToInt32(d[0]));
+                    return new System.DateTime(Convert.ToInt32(d[jaarArrayIndex]), 12, Convert.ToInt32(d[0]));
                 default:
                     return new System.DateTime(1900, 1, 1);
             }
